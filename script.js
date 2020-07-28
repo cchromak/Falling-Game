@@ -97,7 +97,7 @@ setInterval(function(){
     }
     if(characterTop < 1){
         character.style.top = characterTop + 350 + "px";
-        var result = alert("You're high score was " + (counter - 5 - lastGame) + "!!!" + "Do you want to play again?");
+        var result = alert("You're high score was " + (counter - 5 - lastGame) + "!!!" + " Do you want to play again?");
         lastGame = counter - 5;
     }
    
