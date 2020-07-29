@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    padding: 25px;
-    margin: 25px;
+    padding: 10px;
+    margin: 10px;
     font-family: 'Press Start 2P';
     color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
-
 
 #game {
     width: 400px;
-    height: 500px;
+    height: 515px;
     border: 1px solid black;
     margin: auto;
 }
@@ -26,6 +25,10 @@ body {
     top: 440px;
     left: 200px;
     z-index: 10000;
+}
+
+#high {
+    padding: 20px;
 }
 
 .block {

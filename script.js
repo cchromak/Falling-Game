@@ -6,6 +6,7 @@ var both = 0;
 var counter = 0;
 var currentBlocks = [];
 var lastGame = 0;
+var lastScore = 0;
 
 function moveLeft(){
     var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
@@ -89,7 +90,7 @@ setInterval(function(){
         }
     }
     if(drop == 0){
-        if(characterTop < 480) {
+        if(characterTop < 495) {
         character.style.top = characterTop + 2 + "px";
         }
     } else {
@@ -97,8 +98,14 @@ setInterval(function(){
     }
     if(characterTop < 1){
         character.style.top = characterTop + 350 + "px";
-        var result = alert("You're high score was " + (counter - 5 - lastGame) + "!!!" + " Do you want to play again?");
+        var result = alert("Oh no! You're little ball friend didn't make it :'(   Want to try again?");
+        if (counter - 5 - lastGame > lastScore) {
+            lastScore = counter - 5 - lastGame; 
+            document.getElementById("high").innerHTML= "HIGH SCORE: " + (lastScore);
+        }
+        lastScore = counter - 5 - lastGame; 
         lastGame = counter - 5;
+        
     }
    
 }, 1);
